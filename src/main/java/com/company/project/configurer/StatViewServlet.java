@@ -1,4 +1,8 @@
-package com.company.project.configurer;
-
-public class StatViewServlet {
-}
+//package com.company.project.configurer;
+//
+//import javax.servlet.annotation.WebServlet;
+//
+//@WebServlet(urlPatterns = "/my")
+//public class StatViewServlet {
+//
+//}

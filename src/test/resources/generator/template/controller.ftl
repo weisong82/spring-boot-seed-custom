@@ -22,31 +22,31 @@ public class ${modelNameUpperCamel}Controller {
     @Resource
     private ${modelNameUpperCamel}Service ${modelNameLowerCamel}Service;
 
-    @PostMapping("/add")
+    @RequestMapping("/add")
     public Result add(${modelNameUpperCamel} ${modelNameLowerCamel}) {
         ${modelNameLowerCamel}Service.save(${modelNameLowerCamel});
         return ResultGenerator.genSuccessResult();
     }
 
-    @PostMapping("/delete")
+    @RequestMapping("/delete")
     public Result delete(@RequestParam Integer id) {
         ${modelNameLowerCamel}Service.deleteById(id);
         return ResultGenerator.genSuccessResult();
     }
 
-    @PostMapping("/update")
+    @RequestMapping("/update")
     public Result update(${modelNameUpperCamel} ${modelNameLowerCamel}) {
         ${modelNameLowerCamel}Service.update(${modelNameLowerCamel});
         return ResultGenerator.genSuccessResult();
     }
 
-    @PostMapping("/detail")
+    @RequestMapping("/detail")
     public Result detail(@RequestParam Integer id) {
         ${modelNameUpperCamel} ${modelNameLowerCamel} = ${modelNameLowerCamel}Service.findById(id);
         return ResultGenerator.genSuccessResult(${modelNameLowerCamel});
     }
 
-    @PostMapping("/list")
+    @RequestMapping("/list")
     public Result list(@RequestParam(defaultValue = "0") Integer page, @RequestParam(defaultValue = "0") Integer size) {
         PageHelper.startPage(page, size);
         List<${modelNameUpperCamel}> list = ${modelNameLowerCamel}Service.findAll();
